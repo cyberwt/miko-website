@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miko — Content Localization & Media</title>
+    <meta name="description" content="Miko helps brands localize content and produce media that resonates across markets.">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body class="font-[Inter] bg-slate-950 text-slate-100">
+    <header class="fixed top-0 inset-x-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="inline-flex items-center gap-2 text-xl font-bold tracking-tight">
+            <img src="/assets/images/logo.png" alt="Miko" class="h-8 w-auto" loading="eager" decoding="async">
+          </a>
+          <nav class="hidden md:flex items-center gap-8 text-sm">
+            <a href="#services" class="hover:text-fuchsia-300">Services</a>
+            <a href="#process" class="hover:text-fuchsia-300">Process</a>
+            <a href="#work" class="hover:text-fuchsia-300">Work</a>
+            <a href="#contact" class="hover:text-fuchsia-300">Contact</a>
+          </nav>
+          <button id="navToggle" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-white/10 hover:bg-white/5">
+            <span class="sr-only">Menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M3.75 5.25a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Zm0 6.75c0-.414.336-.75.75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Zm.75 6a.75.75 0 0 0 0 1.5h15a.75.75 0 0 0 0-1.5H4.5Z" clip-rule="evenodd"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileNav" class="md:hidden hidden border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 grid gap-2 text-sm">
+          <a href="#services" class="py-2">Services</a>
+          <a href="#process" class="py-2">Process</a>
+          <a href="#work" class="py-2">Work</a>
+          <a href="#testimonials" class="py-2">Testimonials</a>
+          <a href="#contact" class="py-2">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="relative pt-28 overflow-hidden">
+        <div class="absolute inset-0 -z-10 opacity-50">
+          <div class="absolute -top-40 -right-40 h-80 w-80 rounded-full blur-3xl bg-fuchsia-500/30"></div>
+          <div class="absolute top-40 -left-40 h-80 w-80 rounded-full blur-3xl bg-indigo-500/30"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+                Localize your content.
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Resonate everywhere.</span>
+              </h1>
+              <p class="mt-6 text-slate-300 max-w-xl">Miko is a content localization and media company helping brands adapt stories, creative, and experiences for any language and market.</p>
+              <div class="mt-8 flex items-center gap-3">
+                <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-gradient-to-r from-fuchsia-600 to-indigo-600 hover:from-fuchsia-500 hover:to-indigo-500 text-white font-medium">Start a project</a>
+                <a href="#work" class="inline-flex items-center justify-center px-5 py-3 rounded-md border border-white/10 hover:bg-white/5 font-medium">See our work</a>
+              </div>
+              <div class="mt-8 flex items-center gap-6 text-xs text-slate-400">
+                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-fuchsia-400"></span> 150+ markets</div>
+                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-indigo-400"></span> 80+ languages</div>
+                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> 24h turnarounds</div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="aspect-[4/3] rounded-xl ring-1 ring-white/10 overflow-hidden bg-slate-900">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1400&auto=format&fit=crop" alt="Studio workspace" class="h-full w-full object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <h2 class="text-2xl sm:text-3xl font-semibold">What we do</h2>
+            <p class="mt-3 text-slate-300">Full-service content localization and media production to scale your global voice.</p>
+          </div>
+          <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+              <div class="h-10 w-10 rounded-md bg-fuchsia-500/20 text-fuchsia-300 inline-flex items-center justify-center">A</div>
+              <h3 class="mt-4 font-semibold">Market Enablement</h3>
+              <p class="mt-2 text-sm text-slate-300">Strategy, research, and testing to land culturally-aligned creative in new regions.</p>
+            </div>
+            <div class="p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+              <div class="h-10 w-10 rounded-md bg-indigo-500/20 text-indigo-300 inline-flex items-center justify-center">🎧</div>
+              <h3 class="mt-4 font-semibold">Dubbing & Voiceover</h3>
+              <p class="mt-2 text-sm text-slate-300">Multi-language VO, dubbing, ADR, and casting through a global talent network.</p>
+            </div>
+            <div class="p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+              <div class="h-10 w-10 rounded-md bg-emerald-500/20 text-emerald-300 inline-flex items-center justify-center">💬</div>
+              <h3 class="mt-4 font-semibold">Subtitles & Captions</h3>
+              <p class="mt-2 text-sm text-slate-300">Fast, accurate, accessible subtitles with style guides and QA workflows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-3 gap-10 items-start">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-semibold">How we work</h2>
+              <p class="mt-3 text-slate-300">A proven, collaborative workflow designed for speed, quality, and scale.</p>
+            </div>
+            <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+              <div class="p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+                <div class="text-sm text-slate-400">01</div>
+                <h3 class="mt-2 font-semibold">Discovery</h3>
+                <p class="mt-2 text-sm text-slate-300">Goals, audiences, and creative intent to define the right localization approach.</p>
+              </div>
+              <div class="p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+                <div class="text-sm text-slate-400">02</div>
+                <h3 class="mt-2 font-semibold">Production</h3>
+                <p class="mt-2 text-sm text-slate-300">Transcreation, VO, and post with rigorous linguistic and technical QA.</p>
+              </div>
+              <div class="p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+                <div class="text-sm text-slate-400">03</div>
+                <h3 class="mt-2 font-semibold">Localization QA</h3>
+                <p class="mt-2 text-sm text-slate-300">In-market review and testing with subject matter experts and creators.</p>
+              </div>
+              <div class="p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+                <div class="text-sm text-slate-400">04</div>
+                <h3 class="mt-2 font-semibold">Launch & Iterate</h3>
+                <p class="mt-2 text-sm text-slate-300">Deploy across channels and optimize with performance insights.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-end justify-between gap-6">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-semibold">Selected work</h2>
+              <p class="mt-3 text-slate-300">Recent projects across entertainment, tech, and consumer brands.</p>
+            </div>
+            <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-md border border-white/10 hover:bg-white/5 text-sm">Work with us</a>
+          </div>
+          <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a class="group rounded-xl overflow-hidden ring-1 ring-white/10 bg-slate-900" href="#contact">
+              <img class="h-48 w-full object-cover group-hover:opacity-90 transition" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="Campaign localization">
+              <div class="p-4">
+                <div class="text-sm text-slate-400">Entertainment</div>
+                <div class="font-medium">Creator localization</div>
+              </div>
+            </a>
+            <a class="group rounded-xl overflow-hidden ring-1 ring-white/10 bg-slate-900" href="#contact">
+              <img class="h-48 w-full object-cover group-hover:opacity-90 transition" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Product localization">
+              <div class="p-4">
+                <div class="text-sm text-slate-400">Technology</div>
+                <div class="font-medium">Content transcreation</div>
+              </div>
+            </a>
+            <a class="group rounded-xl overflow-hidden ring-1 ring-white/10 bg-slate-900" href="#contact">
+              <img class="h-48 w-full object-cover group-hover:opacity-90 transition" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop" alt="Retail visuals">
+              <div class="p-4">
+                <div class="text-sm text-slate-400">Consumer</div>
+                <div class="font-medium">Brand partnerships</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+ 
+
+      <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-semibold">Start a project</h2>
+              <p class="mt-3 text-slate-300">Tell us about your goals and markets. We'll reply within one business day.</p>
+              <div class="mt-8 grid sm:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 rounded-lg ring-1 ring-white/10 bg-white/5">Trusted by global teams</div>
+                <div class="p-4 rounded-lg ring-1 ring-white/10 bg-white/5">Secure NDAs available</div>
+              </div>
+            </div>
+            <form id="contactForm" action="https://formsubmit.co/mikomediaconnect@gmail.com" method="POST" class="grid gap-4 p-6 rounded-xl ring-1 ring-white/10 bg-white/5">
+              <input type="hidden" name="_subject" value="Miko — New project inquiry">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="/#contact">
+              <div class="grid gap-1">
+                <label class="text-sm" for="name">Name</label>
+                <input id="name" name="name" required class="px-3 py-2 rounded-md bg-slate-900 ring-1 ring-white/10 focus:outline-none focus:ring-fuchsia-500"/>
+              </div>
+              <div class="grid gap-1">
+                <label class="text-sm" for="email">Email</label>
+                <input id="email" name="email" type="email" required class="px-3 py-2 rounded-md bg-slate-900 ring-1 ring-white/10 focus:outline-none focus:ring-fuchsia-500"/>
+              </div>
+              <div class="grid gap-1">
+                <label class="text-sm" for="message">Project details</label>
+                <textarea id="message" name="message" rows="4" required class="px-3 py-2 rounded-md bg-slate-900 ring-1 ring-white/10 focus:outline-none focus:ring-fuchsia-500"></textarea>
+              </div>
+              <button type="submit" class="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-md bg-gradient-to-r from-fuchsia-600 to-indigo-600 hover:from-fuchsia-500 hover:to-indigo-500 text-white font-medium">Send</button>
+              <p id="formStatus" class="text-sm text-slate-300"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-10 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <img src="/assets/images/logo.png" alt="Miko" class="h-7 w-auto">
+          <span class="sr-only">Miko</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#services" class="hover:text-slate-200">Services</a>
+          <a href="#work" class="hover:text-slate-200">Work</a>
+          <a href="#contact" class="hover:text-slate-200">Contact</a>
+        </div>
+        <div>© <span id="year"></span> Miko</div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

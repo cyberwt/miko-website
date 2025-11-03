@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.DS_Store
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
