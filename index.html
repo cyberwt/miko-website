@@ -218,7 +218,7 @@
               <input type="hidden" name="_subject" value="Miko — New project inquiry">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="/#contact">
+              <input type="hidden" name="_next" value="https://cyberwt.github.io/miko-website/?success=true#contact">
               <div class="grid gap-1">
                 <label class="text-sm" for="name">Name</label>
                 <input id="name" name="name" required class="px-3 py-2 rounded-md bg-slate-900 ring-1 ring-white/10 focus:outline-none focus:ring-fuchsia-500"/>
@@ -232,7 +232,7 @@
                 <textarea id="message" name="message" rows="4" required class="px-3 py-2 rounded-md bg-slate-900 ring-1 ring-white/10 focus:outline-none focus:ring-fuchsia-500"></textarea>
               </div>
               <button type="submit" class="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-md bg-gradient-to-r from-fuchsia-600 to-indigo-600 hover:from-fuchsia-500 hover:to-indigo-500 text-white font-medium">Send</button>
-              <p id="formStatus" class="text-sm text-slate-300"></p>
+              <p id="formStatus" class="text-sm text-emerald-400"></p>
             </form>
           </div>
         </div>
@@ -283,6 +283,17 @@
             }
           });
         });
+        
+        // Show success message if redirected from FormSubmit
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+          const statusEl = document.getElementById('formStatus');
+          if (statusEl) {
+            statusEl.textContent = '✓ Message sent! We\'ll get back to you soon.';
+          }
+          // Remove success param from URL
+          window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+        }
       });
     </script>
     <script src="assets/js/main.js?v=4"></script>
