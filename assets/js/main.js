@@ -1,25 +1,5 @@
-// Smooth scroll for all anchor links
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#' || href === '#home') return;
-      
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        const headerOffset = 80; // Account for fixed header
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-});
+// Smooth scroll handled by inline script in index.html
+// This file now only handles nav toggle, year, and form submission
 
 const navToggle = document.getElementById('navToggle');
 const mobileNav = document.getElementById('mobileNav');
@@ -57,3 +37,4 @@ if (form) {
     }
   });
 }
+

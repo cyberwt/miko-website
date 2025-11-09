@@ -50,15 +50,15 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div style="position: relative; z-index: 10;">
               <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
                 Localize your content.
                 <span class="block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Resonate everywhere.</span>
               </h1>
               <p class="mt-6 text-slate-300 max-w-xl">Miko is a content localization and media company helping brands adapt stories, creative, and experiences for any language and market.</p>
               <div class="mt-8 flex items-center gap-3">
-                <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-gradient-to-r from-fuchsia-600 to-indigo-600 hover:from-fuchsia-500 hover:to-indigo-500 text-white font-medium">Start a project</a>
-                <a href="#work" class="inline-flex items-center justify-center px-5 py-3 rounded-md border border-white/10 hover:bg-white/5 font-medium">See our work</a>
+                <button onclick="scrollToSection('contact');" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-gradient-to-r from-fuchsia-600 to-indigo-600 hover:from-fuchsia-500 hover:to-indigo-500 text-white font-medium cursor-pointer" style="position: relative; z-index: 20;">Start a project</button>
+                <button onclick="scrollToSection('work');" class="inline-flex items-center justify-center px-5 py-3 rounded-md border border-white/10 hover:bg-white/5 font-medium cursor-pointer" style="position: relative; z-index: 20;">See our work</button>
               </div>
               <div class="mt-8 flex items-center gap-6 text-xs text-slate-400">
                 <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-fuchsia-400"></span> 150+ markets</div>
@@ -254,6 +254,37 @@
       </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script>
+      // Global function for button onclick handlers
+      function scrollToSection(sectionId) {
+        const target = document.getElementById(sectionId);
+        
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+      
+      // Handle remaining anchor links (nav, footer, etc.)
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+          link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href !== '#' && href !== '#home') {
+              e.preventDefault();
+              const sectionId = href.substring(1);
+              scrollToSection(sectionId);
+            }
+          });
+        });
+      });
+    </script>
+    <script src="assets/js/main.js?v=4"></script>
   </body>
 </html>
